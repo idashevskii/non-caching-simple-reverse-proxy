@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: nginx:1.31.5-alpine
+    restart: until-stopped
+    ports:
+      - "443:443"
+    environment:
+      - LISTEN_PORT=$LISTEN_PORT
+      - UPSTREAM_ENDPOINT=$UPSTREAM_ENDPOINT
+    volumes:
+      - ./nginx.conf:/etc/nginx/templates/nginx.template:ro
