@@ -6,5 +6,6 @@ services:
       - $LISTEN_IP:$LISTEN_PORT:80
     environment:
       - TARGET_HOSTNAME=$TARGET_HOSTNAME
+      - TARGET_PATH=$TARGET_PATH
     volumes:
       - ./nginx.conf:/etc/nginx/templates/default.conf.template:ro
