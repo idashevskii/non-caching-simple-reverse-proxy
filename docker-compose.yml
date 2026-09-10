@@ -7,5 +7,6 @@ services:
     environment:
       - TARGET_HOSTNAME=$TARGET_HOSTNAME
       - TARGET_PATH=$TARGET_PATH
+      - DNS_RESOLVER=$DNS_RESOLVER
     volumes:
       - ./nginx.conf:/etc/nginx/templates/default.conf.template:ro
