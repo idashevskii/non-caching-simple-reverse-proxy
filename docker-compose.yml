@@ -5,6 +5,6 @@ services:
     ports:
       - $LISTEN_IP:$LISTEN_PORT:80
     environment:
-      - UPSTREAM_ENDPOINT=$UPSTREAM_ENDPOINT
+      - TARGET_HOSTNAME=$TARGET_HOSTNAME
     volumes:
       - ./nginx.conf:/etc/nginx/templates/default.conf.template:ro
